@@ -16,6 +16,8 @@ gem "minitest-reporters"
 
 gem "tailwindcss-rails", "~> 2.0"
 
+gem 'rails-controller-testing'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

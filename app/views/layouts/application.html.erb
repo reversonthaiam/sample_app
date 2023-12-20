@@ -8,22 +8,13 @@
     <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
   <body>
-    <header class="bg-neutral-900 h-24 flex items-center w-full">
-      <div class="flex w-full justify-around">
-        <%= link_to "sample app", '#', class: "text-white", id: "logo" %>
-        <nav class="flex items-center">
-          <ul class="flex flex-row gap-10">
-            <li><%= link_to "Home", '#', class: "text-white" %></li>
-            <li><%= link_to "Help", '#', class: "text-white" %></li>
-            <li><%= link_to "Log in", '#', class: "text-white" %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
