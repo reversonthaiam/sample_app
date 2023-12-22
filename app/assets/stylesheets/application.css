@@ -17,3 +17,10 @@
 /* app/assets/stylesheets/application.css */
 
 /* Adicione seu próprio CSS abaixo desses imports se necessário */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 200px;
+  margin-top: 45px;
+}
