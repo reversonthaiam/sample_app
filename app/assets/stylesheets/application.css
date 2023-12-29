@@ -24,3 +24,11 @@
   width: 200px;
   margin-top: 45px;
 }
+
+#error_explanation {
+  background: rgb(253, 200, 200);
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px 0px;
+  padding: 0px 10px;
+}

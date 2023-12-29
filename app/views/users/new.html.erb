@@ -1,3 +1,18 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-<p>This will be a signup page for new users.</p>
+<h1 class="text-center text-6xl mt-6">Sign up</h1>
+<div class="flex justify-center mt-6 min-h-[300px]">
+  <div class="">
+    <%= form_with(model: @user, class: "flex flex-col", local: true) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.label :name, class: "" %>
+      <%= f.text_field :name, class: "border h-10 px-3 rounded form-control" %>
+      <%= f.label :email, class: "mt-2" %>
+      <%= f.email_field :email, class: "border h-10 px-3 rounded" %>
+      <%= f.label :password, class: "mt-2" %>
+      <%= f.password_field :password, class: "border h-10 px-3 rounded" %>
+      <%= f.label :password_confirmation, "Confirmation", class: "mt-2" %>
+      <%= f.password_field :password_confirmation, class: "border h-10 px-3 rounded" %>
+      <%= f.submit "Create my account", class: "border h-10 bg-gray-400 mt-5 rounded mb-10" %>
+    <% end %>
+  </div>
+</div>
