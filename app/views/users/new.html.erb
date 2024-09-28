@@ -1,18 +1,23 @@
 <% provide(:title, 'Sign up') %>
-<h1 class="text-center text-6xl mt-6">Sign up</h1>
+<h1 class="text-center text-6xl mt-6 font-bold text-gray-800">Sign up</h1>
 <div class="flex justify-center mt-6 min-h-[300px]">
-  <div class="">
-    <%= form_with(model: @user, class: "flex flex-col", local: true) do |f| %>
+  <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-sm">
+    <%= form_with(model: @user, class: "flex flex-col gap-1", local: true) do |f| %>
       <%= render 'shared/error_messages' %>
-      <%= f.label :name, class: "" %>
-      <%= f.text_field :name, class: "border h-10 px-3 rounded form-control" %>
-      <%= f.label :email, class: "mt-2" %>
-      <%= f.email_field :email, class: "border h-10 px-3 rounded" %>
-      <%= f.label :password, class: "mt-2" %>
-      <%= f.password_field :password, class: "border h-10 px-3 rounded" %>
-      <%= f.label :password_confirmation, "Confirmation", class: "mt-2" %>
-      <%= f.password_field :password_confirmation, class: "border h-10 px-3 rounded" %>
-      <%= f.submit "Create my account", class: "border h-10 bg-gray-400 mt-5 rounded mb-10" %>
+
+      <%= f.label :name, class: "font-medium text-gray-700 mt-4" %>
+      <%= f.text_field :name, class: "w-full border border-gray-300 h-10 px-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" %>
+
+      <%= f.label :email, class: "font-medium text-gray-700 mt-4" %>
+      <%= f.email_field :email, class: "w-full border border-gray-300 h-10 px-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" %>
+
+      <%= f.label :password, class: "font-medium text-gray-700 mt-4" %>
+      <%= f.password_field :password, class: "w-full border border-gray-300 h-10 px-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" %>
+
+      <%= f.label :password_confirmation, "Confirmation", class: "font-medium text-gray-700 mt-4" %>
+      <%= f.password_field :password_confirmation, class: "w-full border border-gray-300 h-10 px-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" %>
+
+      <%= f.submit "Create my account", class: "border border-transparent h-10 bg-blue-500 text-white font-semibold rounded-lg mt-6 hover:bg-blue-600 transition duration-200" %>
     <% end %>
   </div>
 </div>

@@ -23,6 +23,9 @@
   float: left;
   width: 200px;
   margin-top: 45px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #error_explanation {
@@ -31,4 +34,13 @@
   border-radius: 5px;
   margin: 20px 0px;
   padding: 0px 10px;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
 }
