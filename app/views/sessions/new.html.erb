@@ -11,11 +11,13 @@
         <%= f.label :password, class: "block text-gray-700 text-sm font-bold mb-2" %>
         <%= f.password_field :password, class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline' %>
       </div>
-      <%= f.label :remember_me, class: "checkbox inline" do %>
-        <%= f.check_box :remember_me %>
-        <span>Remember me on this computer</span>
-      <% end %>
-      <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <%= f.check_box :remember_me, class: "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" %>
+        <%= f.label :remember_me, class: "text-sm font-medium text-gray-700" do %>
+          <span>Remember me on this computer</span>
+        <% end %>
+      </div>
+      <div class="flex items-center justify-between mt-4">
         <%= f.submit "Log in", class: "w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
       </div>
     <% end %>
