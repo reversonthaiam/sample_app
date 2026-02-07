@@ -6,7 +6,7 @@
         <li><%= link_to "Home", root_path, class: "hover:text-gray-300" %></li>
         <li><%= link_to "Help", help_path, class: "hover:text-gray-300" %></li>
         <% if logged_in? %>
-          <li><%= link_to "Users", '#', class: "hover:text-gray-300" %></li>
+          <li><%= link_to "Users", users_path, class: "hover:text-gray-300" %></li>
           <li class="relative group">
             <button class="flex items-center hover:text-gray-300 focus:outline-none">
               Account <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
