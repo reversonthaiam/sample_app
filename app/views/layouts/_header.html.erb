@@ -13,7 +13,7 @@
             </button>
             <ul id="dropdown-menu" class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 ease-in-out z-20">
               <li><%= link_to "Profile", current_user, class: "block px-4 py-2 hover:bg-gray-100" %></li>
-              <li><%= link_to "Settings", '#', class: "block px-4 py-2 hover:bg-gray-100" %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user), class: "block px-4 py-2 hover:bg-gray-100" %></li>
               <li class="border-t border-gray-200"></li>
               <li>
                 <%= link_to "Log out", logout_path, method: :delete, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-100" %>

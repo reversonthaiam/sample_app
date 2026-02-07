@@ -10,7 +10,7 @@ class User < ApplicationRecord
     uniqueness: { case_sensitive: false }
 
     has_secure_password
-    validates :password, presence: true, length: { minimum: 6 }
+    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
     # Returns the hash digest of the given string.
     def User.digest(string)
@@ -37,6 +37,13 @@ class User < ApplicationRecord
     def authenticated?(remember_token)
         return false if remember_digest.nil?
         BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    end
+
+    def session_token
+        if remember_digest.nil?
+            remember
+        end
+        remember_digest
     end
 
     class << self
